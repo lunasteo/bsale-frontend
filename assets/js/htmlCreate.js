@@ -39,6 +39,7 @@ const createPagination = async(numFinal) => {
 
     pageNumber.forEach(e => {
         e.addEventListener('click', ()=> {
+            cleanHtml(mainCards)
             createCardProductHtml(e.textContent)
             cleanHtml(mainPagination);
         })
