@@ -44,7 +44,7 @@ const goTocategories = () => {
             const data = await getProductsByCategory(node.id)
             data.forEach(product => {
                 const { name, ulrImage, price, discount } = product;
-                cardUi(mainCards, ulrImage, name, price);
+                cardUi(mainCards, ulrImage, name, price, discount);
             })
         })
     })

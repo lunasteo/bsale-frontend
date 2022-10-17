@@ -24,7 +24,7 @@ const searchProduct = () => {
             cleanHtml(mainCards)
             result.forEach(product => {
                 const { name, url_image, price, discount } = product;
-                cardUi(mainCards, url_image, name, price);
+                cardUi(mainCards, url_image, name, price, discount);
             });
         }
     })
