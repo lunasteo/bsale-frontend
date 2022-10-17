@@ -25,6 +25,9 @@ const cardUi = (main, url, productName, price, discount) => {
     //La imagen recive la url
     
     imgProduct.setAttribute('src', url);
+    if(!url){
+        imgProduct.setAttribute('src', 'http://127.0.0.1:5500/assets/img/default.png');
+    }
     //Clases para la imagen
     imgProduct.classList.add('card-img-top');
 
