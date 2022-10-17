@@ -76,3 +76,21 @@ Esta funcion crea las categorias en la navbar.
 - goTocategories
 
 Esta funcion permite que al hacer click en las categorias estas generen las cards con los productos asociados.
+
+- createPagination
+
+Esta funcion permite que al hacer click en los links de la paginacion se valla avanzando o retrocediendo entre distintas paginas.
+
+- cardUi.js
+
+Este archivo crea la plantilla html, para luego renderizar en html.
+
+La funcion cardUi, recibe como parametros todos los datos desde la api.
+
+-uiNavBar.js
+
+Este archivo crea la plantilla html, de la nav bar.
+
+- uiPaginacion,js
+
+Este archivo crea la plantilla html, de la paginacion.

@@ -22,6 +22,7 @@ const searchInput = document.querySelector('#search-input');
 
 formSearch.addEventListener('submit', async (e) => {
     e.preventDefault();
+    //Validacion para que solo se acepten letras y espacios.
     const expr = /([^\w\d])+/g;
     let testInput = expr.test(searchInput.value);
     console.log(testInput)
