@@ -1,3 +1,5 @@
+import {discountCal, calSaving} from "./discount.js";
+
 const cardUi = (main, url, productName, price, discount) => {
     const divCol = document.createElement('div');
     //Va dentro del divCol
@@ -10,10 +12,9 @@ const cardUi = (main, url, productName, price, discount) => {
     const p = document.createElement('p')
     const pDiscount = document.createElement('p');
 
-    if(discount > 0){
-        pDiscount.classList.add('position-absolute', 'top-0', 'start-1', 'p-3', 'mb-2', 'bg-danger', 'text-white', 'fw-bold', 'mt-3', 'rounded')
-        pDiscount.textContent = `${discount}%`
-    }
+
+
+    
 
     //Div col
     divCol.classList.add('col')
@@ -43,6 +44,19 @@ const cardUi = (main, url, productName, price, discount) => {
     divCardBody.appendChild(h5);
     divCardBody.appendChild(p);
     divCardBody.appendChild(pDiscount)
+
+    if(discount > 0){
+        pDiscount.classList.add('position-absolute', 'top-0', 'start-1', 'p-3', 'mb-2', 'bg-danger', 'text-white', 'fw-bold', 'mt-3', 'rounded')
+        pDiscount.textContent = `${discount}%`
+        p.textContent = `Antes ${price}`;
+        const pNow = document.createElement('p');
+        const pSaving = document.createElement('p');
+        p.classList.add('text-decoration-line-through')
+        pNow.textContent = `Ahora $${discountCal(price, discount)}`;
+        pSaving.textContent = `Ahorro $${calSaving(price, discount)}`
+        divCardBody.appendChild(pNow)
+        divCardBody.appendChild(pSaving)
+    }
 
     //Se agregan los datos a divCard
     divCard.appendChild(imgProduct);
