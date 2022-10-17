@@ -12,10 +12,6 @@ const cardUi = (main, url, productName, price, discount) => {
     const p = document.createElement('p')
     const pDiscount = document.createElement('p');
 
-
-
-    
-
     //Div col
     divCol.classList.add('col')
 
@@ -55,12 +51,16 @@ const cardUi = (main, url, productName, price, discount) => {
         p.textContent = `Antes $${price}`;
         const pNow = document.createElement('p');
         const pSaving = document.createElement('p');
-        p.classList.add('text-decoration-line-through')
+        p.classList.add('text-decoration-line-through', 'text-danger', 'opacity-50')
         pNow.textContent = `Ahora $${discountCal(price, discount)}`;
-        pSaving.textContent = `Ahorro $${calSaving(price, discount)}`
+        pSaving.textContent = `Ahorro $${calSaving(price, discount)}`;
+        pNow.classList.add('fw-bold')
+        pSaving.classList.add('text-success')
         divCardBody.appendChild(pNow)
         divCardBody.appendChild(pSaving)
     }
+
+    divCardBody.classList.add('text-center')
 
     //Se agregan los datos a divCard
     divCard.appendChild(imgProduct);
