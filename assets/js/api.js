@@ -19,7 +19,7 @@ const getCategories = async() => {
 
 //Obtener los productos segun la categoria.
 const getProductsByCategory = async(id) => {
-    const url = `${urlBaseProd}/category/{id}`;
+    const url = `${urlBaseProd}/category/${id}`;
     const res = await fetch(url);
     const data = await res.json();
     return data.data.products;

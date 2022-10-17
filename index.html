@@ -16,14 +16,13 @@
     <!--Nav Bar-->
     <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">E-commerce</a>
+            <a class="navbar-brand" href="./index.html">E-commerce</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav" id="container-nav-bar">
-                    <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
                 </div>
             </div>
         </div>
@@ -34,7 +33,7 @@
         <br />
         <div class="row justify-content-center">
             <div class="col-12 col-md-10 col-lg-8">
-                <form class="card card-sm">
+                <form class="card card-sm" id="form-search">
                     <div class="card-body row no-gutters align-items-center">
                         <div class="col-auto">
                             <i class="fas fa-search h4 text-body"></i>
@@ -42,7 +41,7 @@
                         <!--end of col-->
                         <div class="col">
                             <input class="form-control form-control-lg form-control-borderless" type="search"
-                                placeholder="Busca tu Producto">
+                                placeholder="Busca tu Producto" id="search-input">
                         </div>
                         <!--end of col-->
                         <div class="col-auto">
@@ -60,16 +59,18 @@
     <div class="container">
         <h1 class="display-6">Ofertas</h1>
         <div class="row row-cols-1 row-cols-md-4 g-4" id="container-card">
-            <!-- <div class="col">
+            <div class="col">
                 <div class="card h-100">
                     <img src="https://dojiw2m9tvv09.cloudfront.net/11132/product/misterbig3308256.jpg"
                         class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Bebida</h5>
-                        <p class="card-text">$1.500</p>
+                        <p class="card-text">Antes $1.500</p>
+                        <p class="position-absolute top-0 start-1 p-3 mb-2 bg-danger text-white fw-bold">20%</p>
+                        <p class="card-text">ahora $1.000</p>
                     </div>
                 </div>
-            </div> -->
+            </div>
         </div>
     </div>
     <!-- Cards products-->
