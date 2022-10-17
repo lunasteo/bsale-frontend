@@ -26,7 +26,7 @@ const cardUi = (main, url, productName, price, discount) => {
     
     imgProduct.setAttribute('src', url);
     if(!url){
-        imgProduct.setAttribute('src', 'http://127.0.0.1:5500/assets/img/default.png');
+        imgProduct.setAttribute('src', 'https://w7.pngwing.com/pngs/175/613/png-transparent-video-cameras-logo-graphy-camera-text-camera-lens-rectangle.png');
         imgProduct.classList.add('card-img-top', 'img-fluid', 'img-thumbnail');
     }
     //Clases para la imagen
