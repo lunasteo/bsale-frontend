@@ -1,5 +1,4 @@
 const cardUi = (main, url, productName, price, discount) => {
-    console.log(discount)
     const divCol = document.createElement('div');
     //Va dentro del divCol
     const divCard = document.createElement('div');

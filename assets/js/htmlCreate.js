@@ -26,7 +26,6 @@ const createCategoriesHtml = async () => {
     categories.forEach(category => {
         const { id, name } = category;
         uiNavBar(mainNav, name, id);
-        console.log(category)
     })
 
     goTocategories();

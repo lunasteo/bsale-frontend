@@ -14,7 +14,7 @@ const searchProduct = () => {
         const expr = /([^\w\d])+/g;
         let testInput = expr.test(searchInput.value);
         console.log(testInput)
-        if (testInput || searchInput === '') {
+        if (testInput) {
             searchInput.classList.add('border-danger');
             setTimeout(() => {
             searchInput.classList.remove('border-danger');
@@ -23,6 +23,7 @@ const searchProduct = () => {
             const result = await searchProductByMatch(searchInput.value);
             cleanHtml(mainCards)
             result.forEach(product => {
+                console.log(product)
                 const { name, url_image, price, discount } = product;
                 cardUi(mainCards, url_image, name, price, discount);
             });
