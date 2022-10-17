@@ -27,9 +27,10 @@ const cardUi = (main, url, productName, price, discount) => {
     imgProduct.setAttribute('src', url);
     if(!url){
         imgProduct.setAttribute('src', 'http://127.0.0.1:5500/assets/img/default.png');
+        imgProduct.classList.add('card-img-top', 'img-fluid', 'img-thumbnail');
     }
     //Clases para la imagen
-    imgProduct.classList.add('card-img-top');
+    imgProduct.classList.add('card-img-top', 'img-fluid', 'img-thumbnail');
 
     //clase para el card body
     divCardBody.classList.add('card-body');
@@ -51,7 +52,7 @@ const cardUi = (main, url, productName, price, discount) => {
     if(discount > 0){
         pDiscount.classList.add('position-absolute', 'top-0', 'start-1', 'p-3', 'mb-2', 'bg-danger', 'text-white', 'fw-bold', 'mt-3', 'rounded')
         pDiscount.textContent = `${discount}%`
-        p.textContent = `Antes ${price}`;
+        p.textContent = `Antes $${price}`;
         const pNow = document.createElement('p');
         const pSaving = document.createElement('p');
         p.classList.add('text-decoration-line-through')
